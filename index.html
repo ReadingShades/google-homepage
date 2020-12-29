@@ -5,9 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google-homepage-clone</title>
 </head>
+<style>
+    ul{
+        display: flex;
+        box-sizing: border-box;
+        list-style-type: none;
+        overflow: hidden;
+        margin:  0;
+        padding: 0;
+        background-color: beige;        
+        align-items: center;
+    }
+
+    ul li{
+        display: inline-block;
+        color: white;
+        text-align: center;
+    }
+
+    #top-navbar{
+        flex-basis: auto;
+    }
+
+    
+</style>
 <body>
     <div>
-        <ul>
+        <ul id="top-navbar"> 
             <li><a href="http://">Gmail</a></li>
             <li><a href="http://">Images</a></li>
             <li><a href="http://">Menu</a></li>
