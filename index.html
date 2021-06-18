@@ -74,6 +74,17 @@
         flex-direction: column;
     }
 
+    .submit-button-style{
+        color: grey;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    #searchbar{
+        min-width: 20em;
+        display: block;
+    }
+
     
 </style>
 <body>
@@ -100,9 +111,9 @@
        <div>
         <form action="" method="get">
             <input type="text" name="searchbar" id="searchbar">
-            <div>
-                <input type="submit" value="Google Search">
-                <input type="submit" value="I'm Feeling Lucky">
+            <div style="align-items: center; justify-items: center;">
+                <input class="submit-button-style flex" style="float: left; margin-left: 1em;" type="submit" value="Google Search">
+                <input class="submit-button-style flex" style="float: right; margin-right: 1em;" type="submit" value="I'm Feeling Lucky">
             </div>
         </form>
        </div>
