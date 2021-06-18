@@ -34,18 +34,19 @@
         flex-direction: row-reverse;    
     }
 
-    #footer{
-       align-self: bottom; 
+    #footer{       
+       justify-content: flex-start;         
     }
-    .row-begin{
-        align-self: flex-start;
+    .row-begin{        
+        justify-content: flex-start;
     }
 
     .row-end{
-        align-self: flex-end;
+        float: right;
+        justify-content: flex-end;
     }
     #content{
-        min-height:  100vh;
+        min-height:  80vh;
         flex-grow: 1;
         justify-content: center;
         align-items: center;
@@ -58,10 +59,10 @@
     <header>
         <div id="top-navbar" class="flex">
             <ul> 
-                <li><a href="http://">Gmail</a></li>
-                <li><a href="http://">Images</a></li>
-                <li><a href="http://">Menu</a></li>
-                <li><a href="http://">Sign In</a></li>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Sign In</a></li>
             </ul>
         </div>
     </header>
@@ -80,20 +81,18 @@
     </main>
     <footer>
         <div id="footer" class="flex">
-            <div class="row-begin">
-                <ul >
-                    <li><a href="http://">Advertising</a></li>
-                    <li><a href="http://">Business</a></li>
-                    <li><a href="http://">How Search works</a></li>                
-                </ul>
-            </div>
-            <div class="row-end">
-                <ul >
-                    <li><a href="http://">Privacy</a></li>
-                    <li><a href="http://">Terms</a></li>
-                    <li><a href="http://">Settings</a></li>
-                </ul>
-            </div>
+            <ul class="row-begin">
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">How Search works</a></li>                
+            </ul>
+            
+            <ul class="row-end">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            
         </div>
     </footer>
 </body>
