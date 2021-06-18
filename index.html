@@ -24,7 +24,7 @@
     }
     
     a{
-        color: black;
+        color: grey;
         text-decoration: none;
     }
     a:hover{
@@ -38,7 +38,7 @@
 
     #top-navbar{
         flex-direction: row-reverse;  
-        width: 100%;  
+        width: 100%;          
     }
 
     #footer{       
@@ -48,7 +48,7 @@
        width: 100%;
        position: absolute;
        justify-content: flex-start; 
-       background-color: lightgrey;
+       background-color: rgb(243, 242, 242);
        color: whitesmoke;
     }
 
@@ -75,15 +75,29 @@
     }
 
     .submit-button-style{
+        display: block;
         color: grey;
         margin: auto;
         margin-top: 1em;
+        border-color: honeydew;
+    }
+
+    #searchbarbox{        
+        min-width: 40em;
+        width: 50em;
+        height: 5em;
+        background-color: white;
+        border: 1px solid gray;
+        align-items: center;
+        border-radius: 20px;
     }
 
     #searchbar{
-        min-width: 20em;
+        margin-top: 3em;
         display: block;
-    }
+        min-width: 30em;
+        border-color: rgb(248, 245, 245);
+    }    
 
     
 </style>
@@ -110,8 +124,10 @@
         
        <div>
         <form action="" method="get">
-            <input type="text" name="searchbar" id="searchbar">
-            <div style="align-items: center; justify-items: center;">
+            <div id="searbarbox">
+                <input type="text" name="searchbar" id="searchbar">
+            </div>
+            <div style="margin-left: 5em; align-self: center; align-items: center; justify-items: center; width: 17em;">
                 <input class="submit-button-style flex" style="float: left; margin-left: 1em;" type="submit" value="Google Search">
                 <input class="submit-button-style flex" style="float: right; margin-right: 1em;" type="submit" value="I'm Feeling Lucky">
             </div>
