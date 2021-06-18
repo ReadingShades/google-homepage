@@ -21,38 +21,80 @@
         display: inline-block;
         color: white;
         text-align: center;
+        margin:  0.1em;
+        padding: 0.1em;
+    }
+
+    .flex{
+        display: flex;
+        flex-basis: auto;
     }
 
     #top-navbar{
-        flex-basis: auto;
+        flex-direction: row-reverse;    
+    }
+
+    #footer{
+       align-self: bottom; 
+    }
+    .row-begin{
+        align-self: flex-start;
+    }
+
+    .row-end{
+        align-self: flex-end;
+    }
+    #content{
+        min-height:  100vh;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     
 </style>
 <body>
-    <div>
-        <ul id="top-navbar"> 
-            <li><a href="http://">Gmail</a></li>
-            <li><a href="http://">Images</a></li>
-            <li><a href="http://">Menu</a></li>
-            <li><a href="http://">Sign In</a></li>
-        </ul>
-    </div>
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="googlelogo">
-    <form action="" method="get">
-        <input type="text" name="searchbar" id="searchbar">
-        <input type="submit" value="Google Search">
-        <input type="submit" value="I'm Feeling Lucky">
-    </form>
-    <div>
-        <ul>
-            <li><a href="http://">Advertising</a></li>
-            <li><a href="http://">Business</a></li>
-            <li><a href="http://">How Search works</a></li>
-            <li><a href="http://">Privacy</a></li>
-            <li><a href="http://">Terms</a></li>
-            <li><a href="http://">Settings</a></li>
-        </ul>
-    </div>
+    <header>
+        <div id="top-navbar" class="flex">
+            <ul> 
+                <li><a href="http://">Gmail</a></li>
+                <li><a href="http://">Images</a></li>
+                <li><a href="http://">Menu</a></li>
+                <li><a href="http://">Sign In</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="content" class="flex">
+        <div>
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="googlelogo">
+        </div>
+        
+       <div>
+        <form action="" method="get">
+            <input type="text" name="searchbar" id="searchbar">
+            <input type="submit" value="Google Search">
+            <input type="submit" value="I'm Feeling Lucky">
+        </form>
+       </div>
+    </main>
+    <footer>
+        <div id="footer" class="flex">
+            <div class="row-begin">
+                <ul >
+                    <li><a href="http://">Advertising</a></li>
+                    <li><a href="http://">Business</a></li>
+                    <li><a href="http://">How Search works</a></li>                
+                </ul>
+            </div>
+            <div class="row-end">
+                <ul >
+                    <li><a href="http://">Privacy</a></li>
+                    <li><a href="http://">Terms</a></li>
+                    <li><a href="http://">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
