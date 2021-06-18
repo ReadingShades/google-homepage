@@ -12,17 +12,23 @@
         list-style-type: none;
         overflow: hidden;
         margin:  0;
-        padding: 0;
-        background-color: beige;        
+        padding: 0;             
         align-items: center;
     }
 
     ul li{
-        display: inline-block;
-        color: white;
+        display: inline-block;        
         text-align: center;
-        margin:  0.1em;
-        padding: 0.1em;
+        margin:  0.3em;
+        padding: 0.3em;
+    }
+    
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        color: black;
     }
 
     .flex{
@@ -31,22 +37,37 @@
     }
 
     #top-navbar{
-        flex-direction: row-reverse;    
+        flex-direction: row-reverse;  
+        width: 100%;  
     }
 
     #footer{       
-       justify-content: flex-start;         
+       min-height: 7vh;
+       flex-grow: 1;       
+       bottom: 0;
+       width: 100%;
+       position: absolute;
+       justify-content: flex-start; 
+       background-color: lightgrey;
+       color: whitesmoke;
     }
+
     .row-begin{        
-        justify-content: flex-start;
+        position: absolute;
+        left: 1vh;
     }
 
     .row-end{
-        float: right;
-        justify-content: flex-end;
+        position: absolute;
+        right: 1vh;
     }
+
+    .margin-top{
+        margin-top: 1vh;
+    }
+
     #content{
-        min-height:  80vh;
+        min-height:  70vh;
         flex-grow: 1;
         justify-content: center;
         align-items: center;
@@ -58,7 +79,12 @@
 <body>
     <header>
         <div id="top-navbar" class="flex">
-            <ul> 
+            <ul class="row-begin"> 
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>                
+            </ul>
+
+            <ul class="row-end"> 
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
                 <li><a href="#">Menu</a></li>
@@ -74,25 +100,26 @@
        <div>
         <form action="" method="get">
             <input type="text" name="searchbar" id="searchbar">
-            <input type="submit" value="Google Search">
-            <input type="submit" value="I'm Feeling Lucky">
+            <div>
+                <input type="submit" value="Google Search">
+                <input type="submit" value="I'm Feeling Lucky">
+            </div>
         </form>
        </div>
     </main>
     <footer>
         <div id="footer" class="flex">
-            <ul class="row-begin">
+            <ul class="row-begin margin-top">
                 <li><a href="#">Advertising</a></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">How Search works</a></li>                
             </ul>
             
-            <ul class="row-end">
+            <ul class="row-end margin-top">
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Settings</a></li>
-            </ul>
-            
+            </ul>            
         </div>
     </footer>
 </body>
